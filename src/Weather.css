@@ -41,3 +41,7 @@ body {
   position: relative;
   top: -10px;
 }
+
+.description {
+  text-transform: capitalize;
+}
