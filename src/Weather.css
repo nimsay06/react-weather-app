@@ -29,7 +29,7 @@ body {
 .Weather canvas {
   height: 64px;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 .Weather .temperature {
   font-weight: bold;
