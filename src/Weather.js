@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import WeatherInfo from "./WeatherInfo";
 import PulseLoader from "react-spinners/PulseLoader";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -22,7 +22,7 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "763b250b80fa958302cdd5a87d7a2da5";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
   function handleSubmit(event) {
