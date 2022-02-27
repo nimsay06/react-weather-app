@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import PulseLoader from "react-spinners/PulseLoader";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -32,6 +33,9 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#ffffff");
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -50,6 +54,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
+                id="searchButton"
                 className=" btn btn-primary w-100"
               />
             </div>
@@ -60,6 +65,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="sweet-loading">
+        <PulseLoader color="blue" loading={true} size={25} />
+      </div>
+    );
   }
 }
