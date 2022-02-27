@@ -34,8 +34,6 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#ffffff");
   if (weatherData.ready) {
     return (
       <div className="Weather">
