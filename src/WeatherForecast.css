@@ -1,0 +1,15 @@
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecast-maxTemp {
+  font-weight: bold;
+}
+
+.WeatherForecast-minTemp {
+  opacity: 0.6;
+}
+
+.WeatherForecast .WeatherIcon {
+  max-height: 20px;
+}
