@@ -3,12 +3,12 @@ body {
 }
 
 .Weather {
-  border: 2px solid #50bce9;
-  border-radius: 5px;
-  padding: 16px;
+  border: 2px solid#ffe0e0;
+  border-radius: 10px;
+  padding: 20px;
   margin: 30px auto;
-  background-color: rgb(168, 244, 247);
-  color: rgb(19, 11, 121);
+  background-color: #fffafa;
+  color: #ff60d7;
 }
 
 .Weather h1 {
@@ -19,13 +19,22 @@ body {
 }
 
 .Weather .form-control {
-  background-color: rgb(168, 244, 247);
-  border: 2px solid #50bce9;
+  background-color: #fffafa;
+  border: 2px solid #ffe0e0;
 }
-#searchButton {
-  border: 2px solid #50bce9;
 
-  background: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+#searchButton {
+  margin-top: 10px;
+  border: 2px solid #ffe0e0;
+  color: #dd3e93;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgb(250, 235, 252) 22%,
+    rgb(236, 150, 224) 68%,
+    rgb(234, 133, 214) 81%,
+    rgb(234, 133, 214) 87%
+  );
 }
 .Weather ul {
   margin: 0;
@@ -38,24 +47,27 @@ body {
   list-style: none;
 }
 .Weather canvas {
+  margin: 10px 10px 0px 20px;
   display: inline-block;
-  margin: 10px 0px 0px 0px;
 }
 
 .Weather .col-9 {
-  margin: 0;
-}
-.Weather .unit {
-  font-size: 20px;
+  padding: 10px;
 }
 .Weather .TempElement {
   display: inline-block;
-
-  max-width: 200px;
-  margin: 15px;
-  line-height: 50px;
-  font-size: 45px;
 }
+.Weather .unit {
+  font-size: 20px;
+  float: right;
+}
+.Weather .temperature {
+  font-size: 50px;
+  line-height: 1;
+  margin-left: 40px;
+}
+
 .Weather .description {
   text-transform: capitalize;
+  opacity: 60%;
 }
